@@ -1,0 +1,907 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">什么是_MIT_开源许可证？ | 嗯~~哼~</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "CorruptDarkming";
+  mashiro_option.author_name = "Darkming";
+  mashiro_option.site_url = "https://darkming.top";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://nn4cdn.nikkigames.cn/xiaomaoqiu/a2f95e900d4750426438fa09312cf81e.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/243f8b7c0c6a0efb4ff27467b25c9e45.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/a8b29ae363e4b10576fdd3a1edff4100.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/4a9b14594f60120eba749aedceddeb3b.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/29881c129063477623d68c78f1714552.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/209d3eca858ef44a57cc3d787dfcb3f7.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/24b5c258331040846f15e00f32c33f70.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/5d5b19492b623660d105bdac43661286.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/dccf643c6477e8fcd7c8d9d2d3bce343.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/c6b7a1bea5fe5915922271b1f694b388.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/df18acf8f1c67aaeae974ddd0d31e873.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/da67e25996eb26577ae9768c84a928de.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FF69B4}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://darkming.top">
+          <img src="/images/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>何以解忧？  唯有暴富！</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/CorruptDarkming" target="_blank" class="social-github" title="github">
+                    <img src="/images/donate/github.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="mailto:1679210227@qq.com" target="_blank" class="social-github" title="email">
+                    <img src="/images/donate/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1679210227&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="/images/qq.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://steamcommunity.com/profiles/76561198362428911/" target="_blank" class="social-github" title="steam">
+                    <img src="/images/steam.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.facebook.com/profile.php?id=100034150521855" target="_blank" class="social-github" title="facebook">
+                    <img src="/images/facebook.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Corrupt</span>
+            <span class="shironeko">Darkming</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tvseries/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          电视剧
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://nn4cdn.nikkigames.cn/xiaomaoqiu/46e57456d3eddeea1eb51ee3033c82d2.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/46e57456d3eddeea1eb51ee3033c82d2.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      什么是_MIT_开源许可证？</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://www.suiyuebaobao.com">
+            <img src="https://cdn.jsdelivr.net/gh/cainb/img/web/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="https://www.suiyuebaobao.com">碎月宝宝</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-11-20<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文主要是对自己理解 MIT 开源许可证的一个笔记记录和分享。</p>
+<p>因为 <a href="https://www.suiyuebaobao.com" target="_blank" rel="noopener">碎月</a> 是个萌新，故而，如有错误或疏漏之处，还请谅解！</p>
+<h2 id="什么是开源许可证？"><a href="#什么是开源许可证？" class="headerlink" title="什么是开源许可证？"></a>什么是开源许可证？</h2><p>开源许可证是一种法律许可。通过它，版权拥有人明确允许，用户可以免费地使用、修改、共享版权软件。</p>
+<p>版权法默认禁止共享，也就是说，没有许可证的软件，就等同于保留版权，虽然开源了，用户只能看看源码，不能用，一用就会侵犯版权。所以软件开源的话，必须明确地授予用户开源许可证。</p>
+<p>比如：</p>
+<blockquote>
+<p>我把某个项目的源代码公开放到了 GitHub 上，如果写的还不错，就会有很多人来问我了：你那个代码能不能让我用用？你那个代码我能不能放在我的产品里啊？你那个代码我用了，怎么那么多Bug啊？你那个代码我想当作教学案例使用，请问是不是可以啊？还有，你那个代码我用了，感觉不错，而且我还改了很多地方，我也把它放网上了，而且我还改了个名，你没有意见吧？你有意见我也准备改名了，因为现在这个软件中，我写的代码，比你写的多多了！</p>
+<p>（这都是比较有版权意识的，怕不问你就用以后惹上官司。）</p>
+<p>我可能懒得回答这么多问题，我把这些可能问到的问题，都写成一段话，放在我的代码里，意思就是说：</p>
+<p>我允许你们XXX，我许可你们XXXX，你们可以XXXX，但是，你们必须XXXX，如果你们XXXX了，你们就必须XXXX，对了，对于XXXX这些情况，我可不负责。</p>
+<p>你要同意，就用，不同意就别用。如果你用了，但违反了许可证的要求，我可能会告你啊！</p>
+</blockquote>
+<p>这就是许可证。你可以自己写一个许可证，但是如果你很懒的话 ( 一般人都很懒 ) ，你可以用别人写的比较好的许可证。</p>
+<p>写的比较好的开源许可证有很多种，比如：GPL、BSD、MIT、Apache 等等，MIT 只是其中的一个。这些许可证模版都是免费的，毕竟也没人指望这个卖钱。</p>
+<h2 id="MIT-开源许可证说了什么？"><a href="#MIT-开源许可证说了什么？" class="headerlink" title="MIT 开源许可证说了什么？"></a>MIT 开源许可证说了什么？</h2><p>许可证模板地址：<a href="https://choosealicense.com/licenses/mit/" target="_blank" rel="noopener">MIT 许可证（License）</a> 。</p>
+<p>先看下 MIT 许可证原文：</p>
+<blockquote>
+<p>MIT License</p>
+<p>Copyright (c) [year] [fullname]</p>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the “Software”), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</blockquote>
+<h3 id="剖析其句子结构"><a href="#剖析其句子结构" class="headerlink" title="剖析其句子结构"></a>剖析其句子结构</h3><h4 id="第一段"><a href="#第一段" class="headerlink" title="第一段"></a>第一段</h4><blockquote>
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files ( the “Software” ) , to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:</p>
+</blockquote>
+<p>其大致意思就是：只要满足以下条件，许可被赋予任何 ( 获得本软件拷贝及相关文档的 ) 人 ，这些人可以免费地、没有限制地处理本软件 ( 包括随意地使用、拷贝、合并、发布、分发、再许可、卖拷贝，以及再授权其他人 ( 那些被装配了本软件的 ) 做上面说的这些事 ) 。</p>
+<p>注意，and to permit persons 这里的 to permit，是和 to use，to copy 并列的，后面那个 to do so，则是指代前面的的一系列权利，to whom the Software is furnished 是修饰 persons 的，指的是被装配、被配发本软件的人。</p>
+<p>再有一点比较有趣的是，这一长段被许可的选项中，后面出现了个 and/or。</p>
+<p>and/or 一般用于连接两个选项，比如 A and/or B，意思就是说 A or B or both。这段文字中，虽然 and/or 只连接最后两个选项，但其用意似乎却是连接所有。比如：A, B, C, D and/or E，想表达的是： A and/or B and/or C and/or D and/or E，意思就是 A、B、C、D、E 这些选项可以任意组合选用。这个写法貌似严谨，实则多余。因为没有它完全不影响对文本意思的理解，有了它反而还增加了疑惑。（在文学上或是法律用语上，对 and/or 用法的批评都比较多）</p>
+<h4 id="第二段"><a href="#第二段" class="headerlink" title="第二段"></a>第二段</h4><blockquote>
+<p>The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p>
+</blockquote>
+<p>这句翻译过来就是：以上版权声明和许可声明都必须包含 ( 在所有的本软件的完整拷贝或者实质性成分中 ) 。所谓实质性成分，可以这样理解，比如你对这个软件做了修改，但只改了 5%，那么版权声明和许可证声明都必须包含，如果你改了 95%，那就未必需要了，具体多少需要，要看是不是实质上 ( substantially ) 仍然是人家的。</p>
+<h4 id="第三段"><a href="#第三段" class="headerlink" title="第三段"></a>第三段</h4><blockquote>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p>
+</blockquote>
+<p>这段话，主要是说本软件是 <code>AS IS</code> 的，<code>AS IS</code> 的意思就是：就这样的，售出 ( 或免费提供 ) 后一概不负任何责任，<strong>别再找我，就这样了</strong>。有任何问题你就接受或者自己想办法处理吧，反正我这里不再管了，就是这个意思。</p>
+<p>上面这段全大写的英文很长，但还好，不算很难，基本上就是：本软件是 <code>AS IS</code> 的，我不提供任何保证， ( 不管是显式的还是隐式的，包括但不限于适销性保证、适用性保证、非侵权性保证 ) ) ，在任何情况下， ( 对于任何的权益追索、损失赔偿或者任何追责 ) ，作者或者版权所有人都不会负责。( 无论这些追责产生自合同、侵权，还是直接或间接来自于本软件以及与本软件使用或经营有关的情形 )</p>
+<p>适销性 ( MERCHANTABILITY ) 就是说商品一旦售出 ( 虽然可能是免费的 ) ，如果确有问题，就可以退换货，一般来说适销性是缺省的保证 ( 即便没有明示 ) ，法律会支持消费者对不合格产品的退换货权利^merch。但对于AS IS这类商品而言，就是说你觉得不好使也别找我。你觉得根本没法用 ( FITNESS FOR A PARTICULAR PURPOSE ) 也别找我，而且我也不保证我这软件是不是侵权了。</p>
+<p><strong>MIT 开源许可协议用了几乎一半的篇幅来说这个，足以见其重要性，这是西方人很强的商品经济意识和法律意识导致的。</strong></p>
+<p>这是一种撇清关系的态度，就是说：出了什么事都别找我，更别去法院告我。我给你们贡献源码，可不是想给自己找麻烦的，我又不挣你们的钱。</p>
+<p>所以，把这个许可证里所有的主干挑出来，其实就是：</p>
+<blockquote>
+<p>Permission is granted to any person to deal in the Software without restriction，subject to the following conditions:</p>
+<p>The above copyright notice and this permission notice shall be included.</p>
+<p>THE SOFTWARE IS PROVIDED “AS IS”, IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE.</p>
+</blockquote>
+<p>全文翻译过来，大致就是下面这样子：</p>
+<blockquote>
+<p>（中文版翻译：卫sir，遵循：CC-BY 协议 ）</p>
+<p>MIT 开源许可协议</p>
+<p>版权 ( C ) [这里填发布年份] [这里填版权者全名]</p>
+<p>特此向任何得到本软件拷贝及相关文档 ( 以下统称“本软件” ) 的人授权：被授权人有权免费地、无限制地使用、复制、修改、合并、发布、发行、再许可、售卖本软件拷贝、并有权向被供应人授予同等的权利，但必须满足以下条件：</p>
+<p>在本软件的所有副本或实质性使用中，都必须包含以上版权声明和本授权声明。</p>
+<p>本软件是“按原样“提供的，不附带任何明示或暗示的保证，包括没有任何有关适销性、适用性、非侵权性保证以及其他保证。在任何情况下，作者或版权持有人，对任何权益追索、损害赔偿以及其他追责，都不负任何责任。无论这些追责产生自合同、侵权，还是直接或间接来自于本软件以及与本软件使用或经营有关的情形。</p>
+</blockquote>
+<p>翻译成大白话缩略版，大约是下面这样的：</p>
+<blockquote>
+<p>版权是我XXX的，源自XXXX这一年！<br>我授权任何人，可以干任何事，包括卖拷贝！<br>但是，你必须：<br>保留我的版权和许可！<br>这软件就是这样的！爱用不用，出了事别找我！</p>
+</blockquote>
+<h2 id="我怎么用人家代码才算合规？"><a href="#我怎么用人家代码才算合规？" class="headerlink" title="我怎么用人家代码才算合规？"></a>我怎么用人家代码才算合规？</h2><p>使用一个用了 MIT 协议的源代码，你只需要完整的保留人家的版权和许可证信息即可。</p>
+<p>也就是说要包含 <code>LICENSE</code> 文件，这个文件有完整的 MIT 许可证信息，其中也会有作者的版权信息。</p>
+<p>人家源码里面的版权和许可信息头，你也得保留。</p>
+<p>由于 MIT 协议并不要求使用者公开源码，如果你发行的仅仅是可执行软件（不带源码），那就要在软件的关于界面上说明，并附上 <code>LICENSE</code> 地址和主页（或代码托管地）地址。</p>
+<h2 id="我该怎么使用-MIT-许可协议？"><a href="#我该怎么使用-MIT-许可协议？" class="headerlink" title="我该怎么使用 MIT 许可协议？"></a>我该怎么使用 MIT 许可协议？</h2><p>如果我的开源软件要使用MIT协议，我应该怎么做？</p>
+<p>通常应该这么做：</p>
+<ul>
+<li>在一级目录下，给出一个LICENSE（或COPYING）文件，里面就是这个许可证的全文。</li>
+<li>在所有的源码头部，说明版权，说明许可。</li>
+</ul>
+<blockquote>
+<p>注：有的项目如果使用了多个许可证，可以建一个 licenses 目录用来统一存放这些许可证。</p>
+</blockquote>
+<p>版权那一行，你还可以写上你软件的主页，代码存放地或者邮箱，一般来说，使用者都不应该删除这行内容的。</p>
+<h2 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h2><h3 id="使用了-MIT-许可证后，可以更改为其他许可证吗？"><a href="#使用了-MIT-许可证后，可以更改为其他许可证吗？" class="headerlink" title="使用了 MIT 许可证后，可以更改为其他许可证吗？"></a>使用了 MIT 许可证后，可以更改为其他许可证吗？</h3><p>当然可以，MIT 允许你干任何事。</p>
+<p>所以说，MIT 协议和其他协议的兼容性很强（其实是单向兼容），比如，完全可以把一个MIT协议的软件改为GPL的，但一个GPL的可改不回MIT的。</p>
+<h3 id="可以自己写一个许可证吗？"><a href="#可以自己写一个许可证吗？" class="headerlink" title="可以自己写一个许可证吗？"></a>可以自己写一个许可证吗？</h3><p>当然可以，但是一般时候没有必要。</p>
+<h3 id="我可以不写任何许可协议吗？"><a href="#我可以不写任何许可协议吗？" class="headerlink" title="我可以不写任何许可协议吗？"></a>我可以不写任何许可协议吗？</h3><p>当然可以，不写许可，就是<code>保留所有权利</code>。你可以让他们打电话问你，写邮件问你，你再告诉他们可以干什么。</p>
+<p>保留许可的意思基本上就是说，他们除了可以看你的源码 ( 因为你自己把它开源了 ) ，除了著作权法里面说的权利，基本上啥也不能干。</p>
+<h3 id="如果有人没有按照我的许可协议做，怎么办？"><a href="#如果有人没有按照我的许可协议做，怎么办？" class="headerlink" title="如果有人没有按照我的许可协议做，怎么办？"></a>如果有人没有按照我的许可协议做，怎么办？</h3><p>你可以告他哦！不过，能不能打赢官司又是另一个话题了！</p>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a href="https://zhuanlan.zhihu.com/p/137297074" target="_blank" rel="noopener">卫剑钒：从MIT协议谈契约精神</a></li>
+</ol>
+<blockquote>
+<p>本文原创作者是：<a href="https://www.suiyuebaobao.com/" target="_blank" rel="noopener">碎月</a></p>
+<p>本文永久链接是：<a href="https://blog.suiyuebaobao.com/article/20200914/" target="_blank" rel="noopener">https://blog.suiyuebaobao.com/article/20200914/</a></p>
+<p>博客内容遵循：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+<p>版权声明：博客内容均遵循上述许可协议，转载请注明本文链接。博客部分内容可能来自互联网，若侵犯了您的权益，请与我联系！</p>
+</blockquote>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="/images/donate/WeChanQR.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/11/20/将_Windows_Terminal_添加到鼠标右键菜单/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/d2acd0e1383d4d5f9e7666bc8a304c4d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/d2acd0e1383d4d5f9e7666bc8a304c4d.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                将_Windows_Terminal_添加到鼠标右键菜单</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/11/20/使用阿里云服务器搭配宝塔面板部署_Hexo_博客/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/46e57456d3eddeea1eb51ee3033c82d2.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/46e57456d3eddeea1eb51ee3033c82d2.jpg">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                使用阿里云服务器搭配宝塔面板部署_Hexo_博客</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="https://www.suiyuebaobao.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/cainb/img/web/avatar.jpg" itemprop="image" alt="碎月宝宝" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://www.suiyuebaobao.com" itemprop="url" rel="author">碎月宝宝</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>碎月宝宝</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Corrupt_Darkming<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #f27fcb;">&copy 2021</p>
+    </div>
+      <p style="color: #f27fcb;">Copyright © 2021 <a href="http://darkming.top">darkming.top</a> All Rights Reserved.</p>
+    </div>
+
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"/nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"/nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="/images/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">CorruptDarkming</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/CorruptDarkming" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="mailto:1679210227@qq.com" class="fa fa-envelope" target="_blank" style="color: #FFC338; margin-left:20px"></a>
+      
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=1679210227&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+        <a href="https://steamcommunity.com/profiles/76561198362428911/" class="fa fa-steam-square" target="_blank" style="color: #112250; margin-left:20px"></a>
+      
+        <a href="https://www.facebook.com/profile.php?id=100034150521855" class="fa fa-facebook-square" target="_blank" style="color: #3b5999; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tvseries/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  电视剧
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #f27fcb;">&copy 2021 <a href="http://darkming.top">darkming.top</a> All Rights Reserved.</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2719648377"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="true"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

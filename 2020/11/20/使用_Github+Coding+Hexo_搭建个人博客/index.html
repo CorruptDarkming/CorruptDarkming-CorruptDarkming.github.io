@@ -1,0 +1,1101 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.9.0">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+  
+  <title itemprop="name">使用_Github+Coding+Hexo_搭建个人博客 | 嗯~~哼~</title>
+  
+    <link rel="shortcut icon" href="/images/favicon.ico">
+  
+  <meta http-equiv="x-dns-prefetch-control" content="on">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Noto+SerifMerriweather|Merriweather+Sans|Source+Code+Pro|Ubuntu:400,700|Noto+Serif+SC" media="all">
+  <link rel="dns-prefetch" href="//cdn.jsdelivr.net">
+  <link rel="stylesheet" id="saukra_css-css" href="/css/style.css" type="text/css" media="all">
+  <link rel="stylesheet" href="/css/lib.min.css" media="all">
+  <link rel="stylesheet" href="/css/font.css" media="all">
+  <link rel="stylesheet" href="/css/insight.css" media="all">
+  <link rel="stylesheet" href="/css/jquery.fancybox.min.css" media="all">
+  <link rel="stylesheet" href="/css/zoom.css" media="all">
+  <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<!--   <link rel="stylesheet" id="saukra_css-css" href="https://2heng.xin/wp-content/cache/autoptimize/css/autoptimize_ad42a61f4c7d4bdd9f91afcff6b5dda5.css
+" type="text/css" media="all"> -->
+  <script>
+  /*Initial Variables*/
+  var mashiro_option = new Object();
+  var mashiro_global = new Object();
+  mashiro_option.NProgressON = true;
+  /* 
+   * 邮箱信息之类的东西可以填在这里，这些js变量基本都作用于sakura-app.js
+   * 这样的设置仅是为了方便在基于PHP开发的主题中设置js变量，既然移植到了Node上，我想或许可以精简这一逻辑吧
+   */
+  mashiro_option.email_domain = "";
+  mashiro_option.email_name = "";
+  mashiro_option.cookie_version_control = "";
+  mashiro_option.qzone_autocomplete = false;
+  mashiro_option.site_name = "CorruptDarkming";
+  mashiro_option.author_name = "Darkming";
+  mashiro_option.site_url = "https://darkming.top";
+  mashiro_option.v_appId = "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz";
+  mashiro_option.v_appKey = "mgOpfzbkHYqU92CV4IDlAUHQ";
+  mashiro_option.mathjax = "0";
+  mashiro_option.qq_api_url = "https://api.mashiro.top/qqinfo/"; 
+  mashiro_option.qq_avatar_api_url = "https://api.mashiro.top/qqinfo/";
+
+  // mashiro_option.jsdelivr_css_src = "https://cdn.jsdelivr.net/gh/moezx/cdn@3.4.5/css/lib.min.css";
+  // mashiro_option.float_player_on = true;
+
+  /*End of Initial Variables*/
+  </script>
+  <script type="text/javascript">
+  var bg = "https://nn4cdn.nikkigames.cn/xiaomaoqiu/a2f95e900d4750426438fa09312cf81e.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/243f8b7c0c6a0efb4ff27467b25c9e45.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/a8b29ae363e4b10576fdd3a1edff4100.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/4a9b14594f60120eba749aedceddeb3b.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/29881c129063477623d68c78f1714552.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/209d3eca858ef44a57cc3d787dfcb3f7.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/24b5c258331040846f15e00f32c33f70.png,https://nn4cdn.nikkigames.cn/xiaomaoqiu/5d5b19492b623660d105bdac43661286.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/dccf643c6477e8fcd7c8d9d2d3bce343.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/c6b7a1bea5fe5915922271b1f694b388.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/df18acf8f1c67aaeae974ddd0d31e873.jpg,https://nn4cdn.nikkigames.cn/xiaomaoqiu/da67e25996eb26577ae9768c84a928de.jpg".split(",");
+  var bgindex = Math.floor(Math.random()*bg.length);
+  if (!!window.ActiveXObject || "ActiveXObject" in window) { //is IE?
+    alert('朋友，IE浏览器未适配哦~');
+  }
+  </script>
+  <style type="text/css">
+  .hljs-ln{border-collapse:collapse}.hljs-ln td{padding:0}.hljs-ln-n:before{content:attr(data-line-number)}
+  </style>
+  <style type="text/css">.site-top .lower nav{display:block !important;}.author-profile i,.post-like a,.post-share .show-share,.sub-text,.we-info a,span.sitename,.post-more i:hover,#pagination a:hover,.post-content a:hover,.float-content i:hover{color:#FE9600}.feature i,.download,.navigator i:hover,.links ul li:before,.ar-time i,span.ar-circle,.object,.comment .comment-reply-link,.siren-checkbox-radio:checked + .siren-checkbox-radioInput:after{background:#FE9600}::-webkit-scrollbar-thumb{background:#FE9600}.download,.navigator i:hover,.link-title,.links ul li:hover,#pagination a:hover,.comment-respond input[type='submit']:hover{border-color:#FE9600}.entry-content a:hover,.site-info a:hover,.comment h4 a,#comments-navi a.prev,#comments-navi a.next,.comment h4 a:hover,.site-top ul li a:hover,.entry-title a:hover,#archives-temp h3,span.page-numbers.current,.sorry li a:hover,.site-title a:hover,i.iconfont.js-toggle-search.iconsearch:hover,.comment-respond input[type='submit']:hover{color:#FF69B4}.comments .comments-main{display:block !important;}.comments .comments-hidden{display:none !important;}background-position:center center;background-attachment:inherit;}
+  </style>
+</head>
+</html>
+<body class="page-template page-template-user page-template-page-analytics page-template-userpage-analytics-php page page-id-1297 chinese-font serif isWebKit">
+  <div class="scrollbar" id="bar">
+  </div>
+  <a href="#" class="cd-top faa-float animated"></a>
+  <section id="main-container">
+    <div class="headertop ">
+  <div id="banner_wave_1"></div>
+  <div id="banner_wave_2"></div>
+  <figure id="centerbg" class="centerbg">
+    <div class="focusinfo no-select">
+      <div class="header-tou">
+        <a href="https://darkming.top">
+          <img src="/images/avatar.jpg">
+        </a>
+      </div>
+      <div class="header-info">
+        <p>何以解忧？  唯有暴富！</p>
+        <div class="top-social_v2">
+          <li id="bg-pre">
+            <img class="flipx" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+          
+            
+              
+                <li>
+                  <a href="https://github.com/CorruptDarkming" target="_blank" class="social-github" title="github">
+                    <img src="/images/donate/github.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="mailto:1679210227@qq.com" target="_blank" class="social-github" title="email">
+                    <img src="/images/donate/email.svg">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="http://wpa.qq.com/msgrd?v=3&amp;uin=1679210227&amp;site=qq&amp;menu=yes" target="_blank" class="social-github" title="qq">
+                    <img src="/images/qq.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://steamcommunity.com/profiles/76561198362428911/" target="_blank" class="social-github" title="steam">
+                    <img src="/images/steam.png">
+                  </a>
+                </li>
+              
+            
+              
+                <li>
+                  <a href="https://www.facebook.com/profile.php?id=100034150521855" target="_blank" class="social-github" title="facebook">
+                    <img src="/images/facebook.png">
+                  </a>
+                </li>
+              
+            
+          
+          <li id="bg-next">
+            <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/next-b.svg">
+          </li>
+        </div>
+      </div>
+    </div>
+  </figure>
+  <div id="video-container" style="">
+    <video style="object-fit: fill" id="bgvideo" class="video" video-name="" src="" width="auto" preload="auto">
+    </video>
+    <div id="video-btn" class="loadvideo videolive">
+    </div>
+    <div id="video-add">
+    </div>
+    <div class="video-stu">
+    </div>
+  </div>
+  <div class="headertop-down faa-float animated" onclick="headertop_down()">
+    <span>
+      <i class="fa fa-chevron-down" aria-hidden="true">
+      </i>
+    </span>
+  </div>
+</div>
+    <div id="page" class="site wrapper">
+      <header class="site-header no-select gizle sabit" role="banner">
+  <div class="site-top">
+    <div class="site-branding">
+      <span class="site-title">
+        <span class="logolink moe-mashiro">
+          <a href="/">
+            <span class="sakurasono">Corrupt</span>
+            <span class="shironeko">Darkming</span>
+          </a>
+        </span>
+      </span>
+    </div>
+    <div class="searchbox search-form-submit">
+      <i class="iconfont js-toggle-search iconsearch icon-search">
+      </i>
+    </div>
+    <div id="show-nav" class="showNav mobile-fit">
+      <div class="line line1">
+      </div>
+      <div class="line line2">
+      </div>
+      <div class="line line3">
+      </div>
+    </div>
+    <div class="lower-cantiner">
+      <div class="lower">
+        <nav class="mobile-fit-control hide">
+          <ul id="menu-new" class="menu">
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+                    首页
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/archives">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+                    归档
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/categories/技术/">
+                          <i class="fa fa-code" aria-hidden="true"></i>
+                          技术
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/categories/生活/">
+                          <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                          生活
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="javascript:;">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+                    清单
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/tags/悦读/">
+                          <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                          书单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/bangumi/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          番组
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tvseries/">
+                          <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                          电视剧
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/music/">
+                          <i class="fa fa-headphones" aria-hidden="true"></i>
+                          歌单
+                        </a>
+                      </li>
+                    
+                      <li>
+                        <a href="/tags/图集/">
+                          <i class="fa fa-photo" aria-hidden="true"></i>
+                          图集
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+              <li>
+                <a href="/comment/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+                    留言板
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/links/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+                    友人帐
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/donate/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+                    赞赏
+                  </span>
+                </a>
+                
+              </li>
+            
+              <li>
+                <a href="/">
+                  <span class="faa-parent animated-hover">
+                    <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+                    关于
+                  </span>
+                </a>
+                
+                  <ul class="sub-menu">
+                    
+                      <li>
+                        <a href="/about/">
+                          <i class="fa fa-meetup" aria-hidden="true"></i>
+                          我？
+                        </a>
+                      </li>
+                    
+                  </ul>
+                
+              </li>
+            
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <link rel="stylesheet" type="text/css" href="/css/sharejs.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.css">
+<div class="pattern-center-blank"></div>
+
+  <div class="pattern-center single-center">
+    <!-- 有配图默认渲染第一张 -->
+    <div class="pattern-attachment-img lazyload" style="background-image: url(https://nn4cdn.nikkigames.cn/xiaomaoqiu/d2acd0e1383d4d5f9e7666bc8a304c4d.jpg);" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/d2acd0e1383d4d5f9e7666bc8a304c4d.jpg">
+    </div>
+    <header class="pattern-header single-header">
+      <h1 class="entry-title">
+      使用_Github+Coding+Hexo_搭建个人博客</h1>
+      <p class="entry-census">
+        <span>
+          <a href="https://www.suiyuebaobao.com">
+            <img src="https://cdn.jsdelivr.net/gh/cainb/img/web/avatar.jpg">
+          </a>
+        </span>
+        <span>
+          <a href="https://www.suiyuebaobao.com">碎月宝宝</a>
+        </span>
+        <span class="bull">
+        ·</span>
+        2020-11-20<span class="bull">
+        ·</span>
+      <span id="busuanzi_value_page_pv"></span>次阅读</p>
+    </header>
+  </div>
+
+<div id="content" class="site-content">
+  <div id="primary" class="content-area">
+    <main id="main" class="site-main" role="main">
+      <article id="post-1" class="post-1 post type-post status-publish format-standard has-post-thumbnail hentry category-uncategorized">
+        <div class="toc"></div>
+        <!--<div class="toc-entry-content"><!-- 套嵌目录使用（主要为了支援评论）-->
+        
+        <div class="entry-content">
+          <h2 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h2><p>本文主要是对自己使用 Github+Coding 搭配 Hexo 进行国内外分流双线部署和搭建个人博客的基本流程的一个记录和分享。</p>
+<p>因为 <a href="https://www.suiyuebaobao.com" target="_blank" rel="noopener">碎月</a> 是个萌新，故而，如有错误或疏漏之处，还请谅解！</p>
+<h2 id="创建仓库"><a href="#创建仓库" class="headerlink" title="创建仓库"></a>创建仓库</h2><blockquote>
+<p>因为 Coding 的静态网站部署功能改版（新版开始收费了），故而文中有关 Coding 的那部分流程或许已经失效，阅读时强烈推荐忽略有关 Coding 的那部分流程，给您带来不便，还请谅解！</p>
+</blockquote>
+<p>因为 Github 和 Coding 的 pages 静态网站服务是通过读取你上传至仓库里的静态页面 .html 等文件来帮助你自动更新和展示你的静态网站页面。</p>
+<p>所以需要在 Github 和 Coding 上创建仓库来进行部署和托管。</p>
+<h3 id="创建-Github-仓库"><a href="#创建-Github-仓库" class="headerlink" title="创建 Github 仓库"></a>创建 Github 仓库</h3><p>打开并登录 <a href="https://github.com" target="_blank" rel="noopener">Github</a>（如果没有账号，请自行注册，不做细述）。</p>
+<p>点击页面左上角的 <code>New repository</code> 创建新仓库</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_1.png" alt="使用_Github+Coding+Hexo_搭建个人博客_1"></p>
+<p>GitHub Pages 分为：个人主页，组织主页和项目主页三种类型。</p>
+<ul>
+<li>个人主页和组织主页的 GitHub Pages 仓库命名必须使用：&lt;用户名或组织名&gt;.github.io，且每个用户或组织只能创建一个，站点发布后分配的默认访问地址为：http(s)://&lt;用户名或组织名&gt;.github.io。</li>
+<li>项目主页的 GitHub Pages 仓库名可随意，且理论上可无限创建，没有限制（无论是用户还是组织帐户拥有），站点发布后分配的默认访问地址为：http(s)://&lt;用户名或组织名&gt;.github.io/&lt;项目仓库名&gt;。</li>
+<li>使用项目主页创建的话，如果之后没有绑定自定义域名，网站可能无法正常加载样式文件，所以没有自己的域名的话建议选择使用个人主页命名。解决方法请自行前往：<a href="https://hexo.io/zh-cn/docs/configuration" target="_blank" rel="noopener">Hexo 文档 | 配置</a> 进行查看。</li>
+</ul>
+<p>我这边使用了项目主页，因为我购买了自己的域名，所以仓库名可随意，仓库类型必须选择 Public 进行公开，否则无法发布站点！之后点击 <code>Create repository</code> 创建仓库即可。</p>
+<blockquote>
+<p>国内购买域名的话，我知道的就 <a href="https://www.aliyun.com" target="_blank" rel="noopener">阿里云</a> 和 <a href="https://cloud.tencent.com" target="_blank" rel="noopener">腾讯云</a>，我的是在阿里云上买的。</p>
+</blockquote>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_2.png" alt="使用_Github+Coding+Hexo_搭建个人博客_2"></p>
+<h3 id="创建-Coding-仓库"><a href="#创建-Coding-仓库" class="headerlink" title="创建 Coding 仓库"></a>创建 Coding 仓库</h3><p>打开并登录 <a href="https://coding.net" target="_blank" rel="noopener">Coding</a>（如果没有账号，请自行注册，不做细述）。</p>
+<p>依次点击左边列表的 <code>项目</code>，右上角的 <code>创建项目</code>。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_3.png" alt="使用_Github+Coding+Hexo_搭建个人博客_3"></p>
+<p>项目模板可随意选择，之后可在设置修改。</p>
+<p>项目名称可随意，因为 Coding 没有那么严格的限制，项目标识会根据你的项目名称自动生成，不满意你也可自定义。之后点击完成创建即可。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_4.png" alt="使用_Github+Coding+Hexo_搭建个人博客_4"></p>
+<h2 id="搭建环境"><a href="#搭建环境" class="headerlink" title="搭建环境"></a>搭建环境</h2><p>博客的本地环境除了需要安装 Hexo 博客框架外，还需要 Git 和 Node.js 才能正常运作。</p>
+<h3 id="安装-Git"><a href="#安装-Git" class="headerlink" title="安装 Git"></a>安装 Git</h3><p>打开 <a href="https://git-scm.com" target="_blank" rel="noopener">Git 官网</a>，点击 Downloads。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_5.png" alt="使用_Github+Coding+Hexo_搭建个人博客_5"></p>
+<p>选择对应的系统安装包，等待片刻会自动识别并弹出适合你的安装包。我这边使用的是 Windows 10，所以我点击 Windows。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_6.png" alt="使用_Github+Coding+Hexo_搭建个人博客_6"></p>
+<p>下载完成后，双击安装，根据自己的需求进行勾选或者直接一路 <code>Next</code> 默认安装。</p>
+<p>安装完成后，在电脑上任意位置右击鼠标，点击 Git Bash Here。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_7.png" alt="使用_Github+Coding+Hexo_搭建个人博客_7"></p>
+<p>输入 <code>git --version</code>，若出现版本号，即安装成功。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_8.png" alt="使用_Github+Coding+Hexo_搭建个人博客_8"></p>
+<h3 id="安装-Node-js"><a href="#安装-Node-js" class="headerlink" title="安装 Node.js"></a>安装 Node.js</h3><p>打开 <a href="https://nodejs.org/zh-cn" target="_blank" rel="noopener">Node.js 官网</a>，推荐点击下载长期支持版。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_9.png" alt="使用_Github+Coding+Hexo_搭建个人博客_9"></p>
+<p>下载完成后，双击安装，除了自定义设置 <code>Custom Setup</code> 界面需单击选择 <code>Add to PATH</code> 选项。剩下的一路 <code>Next</code> 默认安装即可。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_10.png" alt="使用_Github+Coding+Hexo_搭建个人博客_10"></p>
+<p>安装完成后，同样在电脑上任意位置右击打开 Git Bash Here。</p>
+<p>输入 <code>node -v</code> 和<code>npm -v</code>，若出现版本号，即安装成功。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_11.png" alt="使用_Github+Coding+Hexo_搭建个人博客_11"></p>
+<h3 id="安装-Hexo"><a href="#安装-Hexo" class="headerlink" title="安装 Hexo"></a>安装 Hexo</h3><p>首先在你喜欢的地方 <code>新建一个文件夹</code>，名称任意。</p>
+<p>比如，我的是：Hexo-Blog-Workshop，当然，这是我的创建规范，你无需跟我一样。</p>
+<p>这个文件夹就是 <code>博客根目录</code>、<code>Hexo 目录</code> 或者 <code>博客大本营</code>，之后的操作基本全在这个文件夹里。</p>
+<p>在该文件夹下的空白地方右击打开 Git Bash Here。输入以下命令安装 Hexo：</p>
+<pre><code>npm install -g hexo-cli
+</code></pre><blockquote>
+<p>耐心等待一会，可能会有些慢。<br>甚至可能会有几个报错，无视就行</p>
+</blockquote>
+<p>安装完成后，继续输入 <code>hexo -v</code>，若出现版本号，即安装成功。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_12.png" alt="使用_Github+Coding+Hexo_搭建个人博客_12"></p>
+<p>接着继续输入 <code>hexo init</code> 初始化文件夹</p>
+<blockquote>
+<p>克隆 Hexo 的 Github 仓库到此文件夹里，所以可能会有点慢，耐心等待即可。</p>
+<p>老样子，可能会有些许报错，无视就行</p>
+</blockquote>
+<p>出现 <code>INFO  Start blogging with Hexo!</code>，说明初始化成功。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_13.png" alt="使用_Github+Coding+Hexo_搭建个人博客_13"></p>
+<p>继续输入 <code>npm install</code> 安装必备的组件。</p>
+<blockquote>
+<p>老样子，可能会有些许报错，无视就行</p>
+</blockquote>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_14.png" alt="使用_Github+Coding+Hexo_搭建个人博客_14"></p>
+<p>继续输入 <code>npm install hexo-deployer-git --save</code>，安装博客推送插件</p>
+<blockquote>
+<p>没有安装此插件之后是无法将使用 <code>hexo g</code> 生成的静态网页文件，用 <code>hexo d</code> 命令推送至仓库进行部署和站点展示的。</p>
+<p>老样子，可能会有些许报错，无视就行</p>
+</blockquote>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_15.png" alt="使用_Github+Coding+Hexo_搭建个人博客_15"></p>
+<p>接下来输入 <code>hexo g</code> 生成静态网页文件。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_16.png" alt="使用_Github+Coding+Hexo_搭建个人博客_16"></p>
+<p>细心的你肯定会发现文件夹里多了个 <code>public</code> 文件夹，这个文件夹里的文件就是之后使用 <code>hexo d</code> 命令会推送至仓库进行部署和展示的站点文件。<code>hexo g</code> 生成的所有文件全在这个文件夹里。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_17.png" alt="使用_Github+Coding+Hexo_搭建个人博客_17"></p>
+<p>最后，输入 <code>hexo s</code> 打开本地预览服务器。</p>
+<blockquote>
+<p><code>hexo s</code> 本地预览服务无需事前进行 <code>hexo g</code> 生成站点文件，只要打开了预览服务，整个 <code>博客文件夹</code> 的文件变动，都可以实时预览，你需要做的就是手动刷新浏览器页面。</p>
+</blockquote>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_18.png" alt="使用_Github+Coding+Hexo_搭建个人博客_18"></p>
+<p>用浏览器打开 <code>http://localhost:4000</code>，如果搭建成功，就可以看到 Hexo 默认的博客网页：</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_19.png" alt="使用_Github+Coding+Hexo_搭建个人博客_19"></p>
+<p>在 Git Bash Here 里按 <code>ctrl+c</code> 可以关闭本地预览服务器。</p>
+<h2 id="链接仓库"><a href="#链接仓库" class="headerlink" title="链接仓库"></a>链接仓库</h2><h3 id="链接-Github"><a href="#链接-Github" class="headerlink" title="链接 Github"></a>链接 Github</h3><p>打开 Git Bash Here 分两次输入以下两个命令进行全局设置 Github 用户名和邮箱：</p>
+<pre><code>git config --global user.name &quot;your_name&quot;
+</code></pre><blockquote>
+<p>记得把 <code>your_name</code> 改为自己的 GitHub 的用户名</p>
+</blockquote>
+<pre><code>git config --global user.email &quot;your_email@example.com&quot;
+</code></pre><blockquote>
+<p>记得把 <a href="mailto:`your_email@example.com" target="_blank" rel="noopener">`your_email@example.com</a>` 改为自己的 GitHub 的主要邮箱</p>
+</blockquote>
+<p>输入以下命令查看是否正确显示自己的用户名和邮箱：</p>
+<pre><code>git config --global --list
+</code></pre><p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_20.png" alt="使用_Github+Coding+Hexo_搭建个人博客_20"></p>
+<p>接着，在 <code>C:/用户/你的用户名/.ssh</code> 文件夹里（第一次有可能没有 <code>.ssh</code> 这个文件夹，可以自己创建一个）右击打开 Git Bash Here，输入以下命令生成密钥：</p>
+<pre><code>ssh-keygen -t rsa -b 4096 -C &quot;your_email@example.com&quot;
+</code></pre><blockquote>
+<p>记得把 <a href="mailto:`your_email@example.com" target="_blank" rel="noopener">`your_email@example.com</a>` 改为自己的 GitHub 的主要绑定邮箱。</p>
+</blockquote>
+<p>因为这里需要与一会下面生成的 Coding 的密钥进行区分，所以在提示 <code>Enter file in which to save the key</code>  时，输入一个新的文件名称就不会冲突了。</p>
+<blockquote>
+<p>关于一台电脑配置多个 Git 账户，具体可以看一下我的另一篇文章：<a href="https://blog.suiyuebaobao.com/article/20200917/" target="_blank" rel="noopener">关于一台电脑配置多个 Git 账户</a></p>
+</blockquote>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_21.png" alt="使用_Github+Coding+Hexo_搭建个人博客_21"></p>
+<p>然后直接一路回车确认即可。</p>
+<p>生成后的文件在 <code>C:/用户/你的用户名/.ssh</code> 里面。</p>
+<p>用记事本打开并复制生成的 <code>Github_id_rsa.pub</code> 文件里的密钥内容。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_22.png" alt="使用_Github+Coding+Hexo_搭建个人博客_22"></p>
+<p>切回 <a href="https://github.com" target="_blank" rel="noopener">Github</a> 界面，点击右上角头像，在下拉菜单里点击 <code>Settings</code>，在 <code>Settings</code> 界面里点击 <code>SSH and GPG keys</code>，点击 <code>New SSH Key</code> 新建 SSH 密钥：</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_23.png" alt="使用_Github+Coding+Hexo_搭建个人博客_23"></p>
+<p>将刚刚复制的全部内容，粘贴到下图 key 框中,Title 随意，点击 <code>Add SSH Key</code> 保存即可。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_24.png" alt="使用_Github+Coding+Hexo_搭建个人博客_24"></p>
+<p>因为需要配置 Github+Coding 多用户 Git，所以需要回到 <code>C:/用户/你的用户名/.ssh</code> 文件夹，在文件夹里新建一个 <code>config</code> 文件（没有后缀），添加如下内容：</p>
+<blockquote>
+<p>其中 Host 和 HostName 需填写 git 服务器的域名，IdentityFile 是指定私钥的路径</p>
+</blockquote>
+<pre><code># Github
+Host github.com
+HostName github.com
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/Github_id_rsa
+# Coding
+Host e.coding.net
+HostName e.coding.net
+PreferredAuthentications publickey
+IdentityFile ~/.ssh/Coding_id_rsa
+</code></pre><p>完成并保存后，在 Git Bash Here 中输入以下命令添加  Github 的 ssh 信任：</p>
+<pre><code>ssh -T git@github.com
+</code></pre><p>首次使用需要确认并添加主机到本机 ssh 可信列表，当出现下面这句提示时，输入 yes 然后一路回车确认即可：</p>
+<pre><code>Are you sure you want to continue connecting (yes/no)?
+</code></pre><p>完成后，如果出现带有自己 Github 用户名的语句即为连接成功：</p>
+<pre><code>Hi &quot;your_name&quot;! You&#39;ve successfully authenticated, but GitHub does not provide shell access.
+</code></pre><p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_25.png" alt="使用_Github+Coding+Hexo_搭建个人博客_25"></p>
+<h3 id="链接-Coding"><a href="#链接-Coding" class="headerlink" title="链接 Coding"></a>链接 Coding</h3><p>在刚刚的 <code>C:/用户/你的用户名/.ssh</code> 文件夹里右击打开 Git Bash Here，输入以下命令生成密钥：</p>
+<pre><code>ssh-keygen -m PEM -t rsa -b 4096 -C &quot;your.email@example.com&quot;
+</code></pre><blockquote>
+<p>记得把 <a href="mailto:`your.email@example.com" target="_blank" rel="noopener">`your.email@example.com</a>` 改为自己的 Coding 的绑定邮箱。</p>
+</blockquote>
+<p>老样子，因为这里需要与 Github 的密钥进行区分，所以在提示 <code>Enter file in which to save the key</code>  时，输入一个新的文件名称。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_26.png" alt="使用_Github+Coding+Hexo_搭建个人博客_26"></p>
+<p>之后就是老样子，一路回车确认即可。</p>
+<p>老步骤，用记事本打开并复制生成的 <code>Coding_id_rsa.pub</code> 文件里的密钥内容。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_27.png" alt="使用_Github+Coding+Hexo_搭建个人博客_27"></p>
+<p>接下来跟 Github 上的步骤差不多：</p>
+<p>切回 <a href="https://coding.net" target="_blank" rel="noopener">Coding</a> 界面，点击右上角头像，在弹出的下拉菜单里点击 <code>个人设置</code>，在打开的 <code>个人设置</code> 界面点击 <code>SSH公钥</code> ，点击 <code>新增公钥</code>。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_28.png" alt="使用_Github+Coding+Hexo_搭建个人博客_28"></p>
+<p>将刚刚复制的全部内容，粘贴到下图 <code>公钥内容</code> 框中,<code>公钥名称</code> 随意，记得把 <code>永久有效</code> 勾上，点击 <code>添加</code> 保存即可。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_29.png" alt="使用_Github+Coding+Hexo_搭建个人博客_29"></p>
+<p>因为上面已经为多用户 Git 创建了 <code>config</code> 文件，所以直接在 Git Bash Here 中输入以下命令添加  Coding 的 ssh 信任：</p>
+<pre><code>ssh -T git@e.coding.net
+</code></pre><p>老样子，首次使用需要确认并添加主机到本机 ssh 可信列表，当出现下面这句提示时，输入 yes 然后一路回车确认即可：</p>
+<pre><code>Are you sure you want to continue connecting (yes/no)?
+</code></pre><p>完成后，出现带有自己 Coding 用户名的语句即为连接成功。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_30.png" alt="使用_Github+Coding+Hexo_搭建个人博客_30"></p>
+<h2 id="部署博客"><a href="#部署博客" class="headerlink" title="部署博客"></a>部署博客</h2><h3 id="推送博客"><a href="#推送博客" class="headerlink" title="推送博客"></a>推送博客</h3><p>在设置推送网站的相关配置前，先在这里说明一下需要用到的文件和文件夹的作用：</p>
+<ul>
+<li>博客根目录里的 <code>_config.yml</code> 文件称为 <code>站点配置文件</code>。</li>
+<li>博客根目录里的 <code>themes</code> 主题文件夹下，每一个主题文件夹里面都有个独立的 <code>_config.yml</code> 文件，这个称为 <code>主题配置文件</code>。</li>
+</ul>
+<p>那么接下来，我们将 Hexo 和 Github 与 Coding 关联起来。</p>
+<p>使用记事本打开站点的配置文件 <code>_config.yml</code>，翻到最后修改部署配置：</p>
+<blockquote>
+<p>因为 Coding 的静态网站部署功能改版（新版开始收费了），故而只使用 GitHub 部署博客的只需填写 GitHub 仓库的 SSH 地址便可，给您带来不便，还请谅解！</p>
+</blockquote>
+<pre><code>deploy:
+type: git
+repository:
+    github: 这里填入你自己的 GitHub 仓库的 SSH 地址
+    coding: 这里填入你自己的 Coding 仓库的 SSH 地址
+branch: master
+</code></pre><p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_31.png" alt="使用_Github+Coding+Hexo_搭建个人博客_31"></p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_32.png" alt="使用_Github+Coding+Hexo_搭建个人博客_32"></p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_33.png" alt="使用_Github+Coding+Hexo_搭建个人博客_33"></p>
+<p>保存修改后，在博客根目录的空白处右击打开 Git Bash Here，输入以下命令进行博客文件推送：</p>
+<ul>
+<li>hexo clean</li>
+</ul>
+<p>注：这个命令是清除博客生成的 public 文件夹，博客出现部署异常时使用，不用次次使用</p>
+<ul>
+<li>hexo g</li>
+</ul>
+<p>注：生成博客站点的静态网页文件</p>
+<ul>
+<li>hexo d</li>
+</ul>
+<p>注：推送生成的博客站点的静态网页文件至 Github 和 Coding 的博客仓库</p>
+<blockquote>
+<p>小贴士：hexo g 和 hexo d 可组合成一个命令：hexo g -d</p>
+</blockquote>
+<p>显示 <code>INFO  Deploy done: git</code> 即为成功推送。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_34.png" alt="使用_Github+Coding+Hexo_搭建个人博客_34"></p>
+<h3 id="发布博客"><a href="#发布博客" class="headerlink" title="发布博客"></a>发布博客</h3><blockquote>
+<p>因为 Coding 的静态网站部署功能改版（新版开始收费了），故而只使用 GitHub 部署博客的只需阅读 <code>发布 Github 博客</code> 的内容便可，给您带来不便，还请谅解！</p>
+</blockquote>
+<h4 id="发布-Github-博客"><a href="#发布-Github-博客" class="headerlink" title="发布 Github 博客"></a>发布 Github 博客</h4><p>打开 GitHub 的博客仓库，点击 <code>Settings</code>，点击 <code>Options</code>，下划页面找到 <code>Github Pages</code>，确认是否成功自动发布。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_35.png" alt="使用_Github+Coding+Hexo_搭建个人博客_35"></p>
+<p>如上图，便是自动发布成功了，点击 Github 给你分配的网址，便可跳转至部署在 Github 上的博客网站。</p>
+<blockquote>
+<p>当然，开头说过：因为使用的是项目主页，所以如果没有绑定自定义域名的话，网站可能无法加载样式文件。</p>
+</blockquote>
+<h4 id="发布-Coding-博客"><a href="#发布-Coding-博客" class="headerlink" title="发布 Coding 博客"></a>发布 Coding 博客</h4><p>打开 Coding 的博客代码仓库，点击 <code>持续部署</code>，点击 <code>静态网站</code>，点击 <code>立即发布静态网站</code>（记得先实名认证）。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_36.png" alt="使用_Github+Coding+Hexo_搭建个人博客_36"></p>
+<p>输入网站名称，部署来源选 <code>本项目仓库</code>，下面的项目和仓库选你创建的博客项目和仓库，触发机制选择 <code>自动部署</code>，点击保存即可。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_37.png" alt="使用_Github+Coding+Hexo_搭建个人博客_37"></p>
+<p>完成后点击 <code>立即部署</code>，即可通过 Coding 给你分配的网址跳转至部署在 Coding 上的博客网站。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_38.png" alt="使用_Github+Coding+Hexo_搭建个人博客_38"></p>
+<h3 id="自定义域名与分流"><a href="#自定义域名与分流" class="headerlink" title="自定义域名与分流"></a>自定义域名与分流</h3><blockquote>
+<p>前排提示：</p>
+<blockquote>
+<p>因为 Coding 的静态网站部署功能改版（新版开始收费了），故而只使用 GitHub 部署博客的可忽略该提示，给您带来不便，还请谅解！</p>
+</blockquote>
+<p>这边建议先部署 Coding 在部署 Github，因为如果你先部署到了 GitHub Pages 并申请和开启了 HTTPS，那么之后在 Coding 的静态网站设置页面绑定你自己的域名，申请 SSL/TLS 安全证书就会显示申请错误，而没有申请到 SSL 证书，当你走 Coding 线路访问你的网站时，浏览器就会提示：连接不安全。</p>
+<p>而申请错误原因是：Coding 在验证域名所有权时会定位到 Github Pages 的主机上导致 SSL 证书申请失败。</p>
+<p>解决的做法是：先去域名 DNS 把 GitHub 线路的解析暂停掉，过一会（5~10 分钟）再重新申请 SSL 证书，大约一分钟左右就能申请成功，然后开启强制 HTTPS 访问。</p>
+<p>证书过期会自动续期，如果自动续期失败需要重新申请时，提示申请失败的话，解决方法是一样的。</p>
+</blockquote>
+<p>首先在本地的博客根目录下的 <code>source</code> 目录里新建名为 <code>CNAME</code> 的文件（没有后缀名），输入自己想要解析的域名，然后保存。</p>
+<p>比如我输入：blog.suiyuebaobao.com。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_39.png" alt="使用_Github+Coding+Hexo_搭建个人博客_39"></p>
+<p>打开并登录你购买的域名的网站，我这边是阿里云，所以我打开阿里云的控制台，进入想要解析的域名的域名解析界面，添加两条解析线路：</p>
+<blockquote>
+<p>因为 Coding 的静态网站部署功能改版（新版开始收费了），故而只使用 GitHub 部署博客的直接添加一条默认指向 GitHub 的便可，给您带来不便，还请谅解！</p>
+</blockquote>
+<ul>
+<li>第一条为国内访问时指向 Coding，记录类型选择 <code>CNAME</code>，主机记录因为我想要解析的是： blog.suiyuebaobao.com，所以这里我填 blog，解析线路选择 <code>默认</code>，记录值为刚刚 Coding 分配给你的网站地址（记得去掉网址开头的 <code>http://</code>）。</li>
+</ul>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_40.png" alt="使用_Github+Coding+Hexo_搭建个人博客_40"></p>
+<p>然后切到 Coding 博客仓库，进入静态页面，点击右上角的设置，在打开的设置界面，找到 <code>自定义域名</code>，输入你要解析的域名进行绑定，且记得将下方的 <code>强制HTTPS</code> 勾上。</p>
+<blockquote>
+<p>完成后可将绑定的域名设置成首选域名。</p>
+</blockquote>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_41.png" alt="使用_Github+Coding+Hexo_搭建个人博客_41"></p>
+<ul>
+<li>第二条为国外访问时指向 Github，记录类型和主机记录跟上面一样，解析线路选择 <code>境外</code>，记录值为：<code>你的 Github 用户名.github.io</code>。</li>
+</ul>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_42.png" alt="使用_Github+Coding+Hexo_搭建个人博客_42"></p>
+<p>然后切到 Github 博客仓库，点击 <code>Settings</code>，点击 <code>Options</code>，下划页面找到 <code>Github Pages</code>，将自己要解析的域名输入到 <code>Custom domain</code> 里，点击 <code>Save</code> 保存即可，记得顺便检查下面的 <code>Enforce HTTPS</code> 强制 HTTPS 连接是否勾上。</p>
+<p><img src="/images/tutorials/使用_Github+Coding+Hexo_搭建个人博客_43.png" alt="使用_Github+Coding+Hexo_搭建个人博客_43"></p>
+<p>到此，便完成了使用 Github+Coding 搭配 Hexo 进行国内外分流双线部署和搭建个人博客的基本流程。</p>
+<p>现在，你可以使用自己的域名正常的访问你的博客了。</p>
+<h2 id="小贴士"><a href="#小贴士" class="headerlink" title="小贴士"></a>小贴士</h2><h3 id="Hexo-常用命令"><a href="#Hexo-常用命令" class="headerlink" title="Hexo 常用命令"></a>Hexo 常用命令</h3><ul>
+<li>npm update hexo -g    =&gt;    升级 Hexo 博客框架</li>
+<li>hexo n “你的文章名字或 ID”    =&gt;    新建文章</li>
+<li>hexo g    =&gt;    生成博客站点静态页面文件</li>
+<li>hexo d    =&gt;    推送并部署生成的博客站点静态网页文件</li>
+<li>hexo s    =&gt;    启动本地预览服务</li>
+<li>ctrl + c    =&gt;    关闭本地预览服务</li>
+</ul>
+<blockquote>
+<p><code>hexo n &quot;你的文章名字或 ID&quot;</code> 命令中的 <code>你的文章名字或 ID</code>，如果直接使用中文的话，博客生成的文章网址链接会非常不好看，所以建议使用数字编号或英文代号，文章的名字可以写到生成的文章里的 <code>title</code> 标签里。</p>
+<p><code>hexo g</code> 和 <code>hexo d</code> 可以组成一个简写命令：<code>hexo g -d</code></p>
+</blockquote>
+<h3 id="Markdown-编辑器推荐"><a href="#Markdown-编辑器推荐" class="headerlink" title="Markdown 编辑器推荐"></a>Markdown 编辑器推荐</h3><p>Hexo 生成的博客文章是 <code>.md</code> 格式，这里推荐两个好用的 Markdown 编辑器。</p>
+<ul>
+<li><a href="https://tamlok.github.io/vnote/zh_cn/" target="_blank" rel="noopener">VNote</a>：一款开源且强大的更懂程序员和 Markdown 的笔记管理软件！Github 上的开源项目地址：<a href="https://github.com/tamlok/vnote" target="_blank" rel="noopener">vnote</a>。</li>
+<li><a href="https://www.typora.io/" target="_blank" rel="noopener">Typora</a>：简单但功能强大，无缝实时预览，所见即所得的免费编辑器。</li>
+</ul>
+<h3 id="Markdown-语法手册"><a href="#Markdown-语法手册" class="headerlink" title="Markdown 语法手册"></a>Markdown 语法手册</h3><p>如果是第一次使用 Markdown 进行书写文章的朋友，可以看看我的另一篇文章：<a href="https://blog.suiyuebaobao.com/20200627" target="_blank" rel="noopener">Markdown 语法快速指南</a>。</p>
+<h3 id="Hexo-主题推荐"><a href="#Hexo-主题推荐" class="headerlink" title="Hexo 主题推荐"></a>Hexo 主题推荐</h3><p>主题的话，这里推荐本博客使用的主题：<a href="https://volantis.js.org" target="_blank" rel="noopener">Volantis</a>，非常的 nice，主题文档全中文且详细，主题的作者大佬也非常的活跃，更新迭代很快。</p>
+<h3 id="仓库容量大小限制"><a href="#仓库容量大小限制" class="headerlink" title="仓库容量大小限制"></a>仓库容量大小限制</h3><ul>
+<li><p>Github 理论上可无限创建仓库，但官方建议每个仓库保持在 1GB 以下，如果您的仓库超过 1GB，可能会收到 GitHub 支持部门要求减小仓库的电子邮件，并进行人工审查，如若发现有问题：轻则删库，重则封号。仓库大小的硬性限制为最大 100GB。 如果达到 75GB，下次推送更改时您将在终端收到 Git 的警告。另外：Github 单文件限制为最大 100M，超过 50M 会收到警告。</p>
+</li>
+<li><p>Coding 目前如果团队人数处于 5 人及以下，可使用 CODING 免费版服务。免费版的 Coding 配额为：单仓库容量 2GB，总仓库容量 100 GB。</p>
+</li>
+</ul>
+<h2 id="参考资料"><a href="#参考资料" class="headerlink" title="参考资料"></a>参考资料</h2><ol>
+<li><a href="https://hexo.io/zh-cn/docs" target="_blank" rel="noopener">Hexo 文档</a></li>
+<li><a href="https://help.github.com/cn/github/working-with-github-pages/about-github-pages" target="_blank" rel="noopener">关于 GitHub Pages</a></li>
+<li><a href="https://help.coding.net/docs/cd/static-website.html#自定义域名设置" target="_blank" rel="noopener">CODING 静态网站服务</a></li>
+<li><a href="https://help.github.com/cn/github/authenticating-to-github/connecting-to-github-with-ssh" target="_blank" rel="noopener">使用 SSH 连接到 GitHub</a></li>
+<li><a href="https://help.coding.net/docs/project/features/ssh.html#添加账户公钥" target="_blank" rel="noopener">配置 SSH 公钥</a></li>
+<li><a href="https://gitee.com/help/articles/4229#article-header0" target="_blank" rel="noopener">Git 配置多个 SSH-Key</a></li>
+<li><a href="https://help.github.com/cn/github/managing-large-files/what-is-my-disk-quota" target="_blank" rel="noopener">我的磁盘配额是多少？</a></li>
+<li><a href="https://help.coding.net/docs/admin/pay/process.html#版本间对比" target="_blank" rel="noopener">团队付费流程</a></li>
+<li><a href="https://man.linuxde.net/ssh-keyscan" target="_blank" rel="noopener">ssh-keyscan命令</a></li>
+</ol>
+<blockquote>
+<p>本文原创作者是：<a href="https://www.suiyuebaobao.com/" target="_blank" rel="noopener">碎月</a></p>
+<p>本文永久链接是：<a href="https://blog.suiyuebaobao.com/article/20200626/" target="_blank" rel="noopener">https://blog.suiyuebaobao.com/article/20200626/</a></p>
+<p>博客内容遵循：<a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="noopener">署名-非商业性使用-相同方式共享 4.0 国际 (CC BY-NC-SA 4.0) 协议</a></p>
+<p>版权声明：博客内容均遵循上述许可协议，转载请注明本文链接。博客部分内容可能来自互联网，若侵犯了您的权益，请与我联系！</p>
+</blockquote>
+
+        </div>
+        <!-- .entry-content -->
+        <div class="single-reward">
+          <div class="reward-open">赏
+            <div class="reward-main">
+              <ul class="reward-row">
+                <li class="alipay-code"><img src="/images/donate/AliPayQR.png"></li>
+                <li class="wechat-code"><img src="/images/donate/WeChanQR.png"></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div style="text-align:center; width: 100%" class="social-share share-mobile" data-disabled="diandian, tencent"></div>
+        <footer class="post-footer">
+          <div class="post-lincenses"><a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.zh" target="_blank" rel="nofollow"><i class="fa fa-creative-commons" aria-hidden="true"></i> 知识共享署名-非商业性使用-相同方式共享 4.0 国际许可协议</a></div>
+          <div class="post-tags">
+          </div>
+          <div class="post-share">
+            <div class="social-share sharehidden share-component"></div>
+            <i class="iconfont show-share icon-forward"></i>
+          </div>
+        </footer><!-- .entry-footer -->
+      </article>
+      <!-- #post-## -->
+      <div class="toc" style="background: none;"></div>
+      <section class="post-squares nextprev">
+        
+          
+            <div class="post-nepre half previous">
+          
+            <a href="/2020/11/20/使用 Github+PicGo+jsDelivr 搭建个人博客图床/" rel="prev">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/d2acd0e1383d4d5f9e7666bc8a304c4d.jpg" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://nn4cdn.nikkigames.cn/xiaomaoqiu/d2acd0e1383d4d5f9e7666bc8a304c4d.jpg">
+              </div>
+              <span class="label">
+              Previous Post</span>
+              <div class="info">
+                <h3>
+                使用_Github+PicGo+jsDelivr_搭建个人博客图床</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+        
+          
+            <div class="post-nepre half next">
+          
+            <a href="/2020/04/22/国民校草是女生/" rel="next">
+              <div class="background">
+                <img class="lazyload" src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/loader/orange.progress-bar-stripe-loader.svg" data-src="https://bookcover.yuewen.com/qdbimg/349573/1004144781/180" style="width: 100%; height: 100%; object-fit: cover; pointer-events: none;" onerror="imgError(this,3)" src="https://bookcover.yuewen.com/qdbimg/349573/1004144781/180">
+              </div>
+              <span class="label">
+              Next Post</span>
+              <div class="info">
+                <h3>
+                国民校草是女生</h3>
+                <hr>
+              </div>
+            </a>
+          </div>
+        
+      </section>
+      
+<div id="vcomments"></div>
+<script>
+  window.onload = function(){
+      var valine = new Valine();
+      valine.init({
+        el: '#vcomments',
+        appId: "GyC3NzMvd0hT9Yyd2hYIC0MN-gzGzoHsz",
+        appKey: "mgOpfzbkHYqU92CV4IDlAUHQ",
+        path: window.location.pathname,
+        placeholder: "你是我一生只会遇见一次的惊喜 ..."
+      })
+  }
+</script>
+
+      <section class="author-profile">
+        <div class="info" itemprop="author" itemscope="" itemtype="http://schema.org/Person">
+          <a href="https://www.suiyuebaobao.com" class="profile gravatar"><img src="https://cdn.jsdelivr.net/gh/cainb/img/web/avatar.jpg" itemprop="image" alt="碎月宝宝" height="70" width="70"></a>
+          <div class="meta">
+            <span class="title">Author</span>
+            <h3 itemprop="name">
+            <a href="https://www.suiyuebaobao.com" itemprop="url" rel="author">碎月宝宝</a>
+            </h3>
+          </div>
+        </div>
+        <hr>
+        <p><i class="iconfont icon-write"></i>碎月宝宝</p>
+      </section>
+    </main><!-- #main -->
+  </div><!-- #primary -->
+</div>
+
+
+
+    </div>    
+    <div class="ins-search">
+    <div class="ins-search-mask"></div>
+    <div class="ins-search-container">
+        <div class="ins-input-wrapper">
+            <input type="text" class="ins-search-input" placeholder="请输入关键词..."/>
+            <span class="ins-close ins-selectable"><i class="fa fa-times-circle"></i></span>
+        </div>
+        <div class="ins-section-wrapper">
+            <div class="ins-section-container"></div>
+        </div>
+    </div>
+</div>
+<script>
+(function (window) {
+    var INSIGHT_CONFIG = {
+        TRANSLATION: {
+            POSTS: '文章',
+            // PAGES: '页面',
+            CATEGORIES: '分类',
+            TAGS: '标签',
+        },
+        ROOT_URL: '/',
+        CONTENT_URL: '/content.json',
+    };
+    window.INSIGHT_CONFIG = INSIGHT_CONFIG;
+})(window);
+</script>
+    <!-- <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      &copy; 2021 Corrupt_Darkming<br>
+      powered_by <a href="http://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer> -->
+<footer id="colophon" class="site-footer" role="contentinfo">
+  <div class="site-info">
+    <div class="footertext">
+      <div class="img-preload">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
+        <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
+      </div>
+      <p style="color: #f27fcb;">&copy 2021</p>
+    </div>
+      <p style="color: #f27fcb;">Copyright © 2021 <a href="http://darkming.top">darkming.top</a> All Rights Reserved.</p>
+    </div>
+
+  </div><!-- .site-info -->
+</footer>
+
+
+
+<!-- <script src="/js/tocbot.js"></script> -->
+<script type="text/javascript" src="/js/lib.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/clipboard@2/dist/clipboard.min.js"></script>
+<script type="text/javascript" src="/js/InsightSearch.js"></script>
+<script type="text/javascript" src="/js/jquery.fancybox.min.js"></script>
+<script type="text/javascript" src="/js/zoom.min.js"></script>
+<script type="text/javascript" src="/js/sakura-app.js"></script>
+<script src="//cdn1.lncld.net/static/js/3.0.4/av-min.js"></script>
+<script src='//unpkg.com/valine@1.3.4/dist/Valine.min.js'></script>
+<script src="/js/botui.js"></script>
+<!-- 不蒜子 网页计数器 -->
+<script src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/tocbot/4.4.2/tocbot.min.js"></script> -->
+<script type="text/javascript">
+/* <![CDATA[ */
+if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
+  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"/nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+} else {
+  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"/nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,/nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+}
+/* ]]> */
+
+</script>
+<script>
+$(document).ready(function() {
+  if ($(".toc").length > 0 && document.body.clientWidth > 1200) {
+    if ($(".pattern-center").length > 0) { //有图的情况
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -400,
+          scrollSmoothOffset: -85
+      });
+    } else {
+      tocbot.init({
+          // Where to render the table of contents.
+          tocSelector: '.toc', // 放置目录的容器
+          // Where to grab the headings to build the table of contents.
+          contentSelector: '.entry-content', // 正文内容所在
+          // Which headings to grab inside of the contentSelector element.
+          scrollSmooth: true,
+          headingSelector: 'h1, h2, h3, h4, h5', // 需要索引的标题级别
+          headingsOffset: -85,
+          scrollSmoothOffset: -85
+      });
+    }
+    var offsetTop = $('.toc').offset().top - 95;
+    window.onscroll = function() {
+      var scrollTop = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop;
+      if (scrollTop >= offsetTop) {
+        $('.toc').addClass('toc-fixed');
+      } else {
+        $('.toc').removeClass('toc-fixed');
+      }
+    }
+  }
+});
+</script>
+
+    <div class="openNav no-select" style="height: 50px;">
+      <div class="iconflat no-select" style="width: 50px; height: 50px;">
+        <div class="icon"></div>
+      </div>
+      <div class="site-branding search-form-submit">
+        <i class="iconfont js-toggle-search iconsearch icon-search"></i>
+      </div>
+    </div>
+  </section>
+  <div id="mo-nav" class="">
+  <div class="m-avatar">
+    <img src="/images/avatar.jpg">
+  </div>
+  <p style="text-align: center; color: #333; font-weight: 900; font-family: 'Ubuntu', sans-serif; letter-spacing: 1.5px">CorruptDarkming</p>
+  <p style="text-align: center; word-spacing: 20px;">
+    
+      
+        <a href="https://github.com/CorruptDarkming" class="fa fa-github" target="_blank" style="color: #333; margin-left:20px"></a>
+      
+        <a href="mailto:1679210227@qq.com" class="fa fa-envelope" target="_blank" style="color: #FFC338; margin-left:20px"></a>
+      
+        <a href="http://wpa.qq.com/msgrd?v=3&uin=1679210227&site=qq&menu=yes" class="fa fa-qq" target="_blank" style="color: #25c6fe; margin-left:20px"></a>
+      
+        <a href="https://steamcommunity.com/profiles/76561198362428911/" class="fa fa-steam-square" target="_blank" style="color: #112250; margin-left:20px"></a>
+      
+        <a href="https://www.facebook.com/profile.php?id=100034150521855" class="fa fa-facebook-square" target="_blank" style="color: #3b5999; margin-left:20px"></a>
+      
+    
+  </p>
+  <ul id="menu-new-1" class="menu">
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-fort-awesome faa-shake" aria-hidden="true"></i>
+            首页
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/archives">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-archive faa-shake" aria-hidden="true"></i>
+            归档
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/categories/技术/">
+                  <i class="fa fa-code" aria-hidden="true"></i>
+                  技术
+                </a>
+              </li>
+            
+              <li>
+                <a href="/categories/生活/">
+                  <i class="fa fa-file-text-o" aria-hidden="true"></i>
+                  生活
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="javascript:;">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-list-ul faa-vertical" aria-hidden="true"></i>
+            清单
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/tags/悦读/">
+                  <i class="fa fa-th-list faa-bounce" aria-hidden="true"></i>
+                  书单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/bangumi/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  番组
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tvseries/">
+                  <i class="fa fa-film faa-vertical" aria-hidden="true"></i>
+                  电视剧
+                </a>
+              </li>
+            
+              <li>
+                <a href="/music/">
+                  <i class="fa fa-headphones" aria-hidden="true"></i>
+                  歌单
+                </a>
+              </li>
+            
+              <li>
+                <a href="/tags/图集/">
+                  <i class="fa fa-photo" aria-hidden="true"></i>
+                  图集
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+      <li>
+        <a href="/comment/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-pencil-square-o faa-tada" aria-hidden="true"></i>
+            留言板
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/links/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-link faa-shake" aria-hidden="true"></i>
+            友人帐
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/donate/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-heart faa-pulse" aria-hidden="true"></i>
+            赞赏
+          </span>
+        </a>
+        
+      </li>
+    
+      <li>
+        <a href="/">
+          <span class="faa-parent animated-hover">
+            <i class="fa  fa-leaf faa-wrench" aria-hidden="true"></i>
+            关于
+          </span>
+        </a>
+        
+          <ul class="sub-menu">
+            
+              <li>
+                <a href="/about/">
+                  <i class="fa fa-meetup" aria-hidden="true"></i>
+                  我？
+                </a>
+              </li>
+            
+          </ul>
+        
+      </li>
+    
+  </ul>
+  <p style="text-align: center; font-size: 13px; color: #f27fcb;">&copy 2021 <a href="http://darkming.top">darkming.top</a> All Rights Reserved.</p>
+</div>
+<button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
+<script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
+<!-- require MetingJS -->
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+<style>
+  .aplayer .aplayer-lrc {
+    height: 35px;
+  }
+  .aplayer .aplayer-lrc p{
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 18px !important;
+  }
+  .aplayer .aplayer-lrc p.aplayer-lrc-current{
+    color: #FF1493;
+  }
+  .aplayer.aplayer-narrow .aplayer-body{
+    left: -66px !important;
+  }
+  .aplayer.aplayer-fixed .aplayer-lrc {
+    display: none;
+  }
+  .aplayer .aplayer-lrc.aplayer-lrc-hide {
+      display:none !important;
+  }
+  .aplayer.aplayer-fixed .lrc-show {
+    display: block;
+    background: rgba(255, 255, 255, 0.8);
+  }
+</style>
+<meting-js
+
+    id="2719648377"
+
+    server="netease"
+
+    type="playlist"
+
+    fixed="true"
+
+    autoplay="true"
+
+    loop="all"
+
+    order="random"
+
+    preload="auto"
+
+    volume="0.7"
+
+    mutex="true"
+
+</meting-js>
+<script>
+  $(function(){
+    $('body').on('click', '.aplayer', function(){
+      if($('.aplayer-button').hasClass('aplayer-play')) {
+        $('.aplayer-lrc').removeClass('lrc-show');
+      } else {
+        $('.aplayer-lrc').addClass('lrc-show');
+      }
+    })
+  });
+</script>
+</body>
+</html>

@@ -396,23 +396,23 @@ function scrollBar () {
       var b = $(window).height()
       var result = parseInt(s / (a - b) * 100)
       $('#bar').css('width', result + '%')
-      if (false) {
+      if (true) {
         if (result >= 0 && result <= 19) {
-          $('#bar').css('background', '#cccccc')
+          $('#bar').css('background', '#FFF0F5')
         }
-        if (result >= 20 && result <= 39) { $('#bar').css('background', '#50bcb6') }
+        if (result >= 20 && result <= 39) { $('#bar').css('background', '#FFB6C1') }
         if (result >= 40 && result <= 59) {
-          $('#bar').css('background', '#85c440')
+          $('#bar').css('background', '#FFC0CB')
         }
         if (result >= 60 && result <= 79) {
-          $('#bar').css('background', '#f2b63c')
+          $('#bar').css('background', '#DB7093')
         }
-        if (result >= 80 && result <= 99) { $('#bar').css('background', '#FF0000') }
+        if (result >= 80 && result <= 99) { $('#bar').css('background', '#FF69B4') }
         if (result == 100) {
-          $('#bar').css('background', '#5aaadb')
+          $('#bar').css('background', '#FF1493')
         }
       } else {
-        $('#bar').css('background', 'orange')
+        $('#bar').css('background', 'crimson')
       }
       $('.toc-container').css('height', $('.site-content').outerHeight())
       $('.skin-menu').removeClass('show')

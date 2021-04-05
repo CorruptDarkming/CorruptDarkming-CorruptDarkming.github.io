@@ -690,7 +690,7 @@ to {
 body {
     margin:0;
     font:300 17px;
-    text-shadow:0 0 1px rgba(0,0,0,.1)
+    text-shadow:0 0 1px rgba(0,0,0,.0)
 }
 input:-webkit-autofill {
     -webkit-box-shadow:0 0 0 1000px white inset
@@ -4491,7 +4491,7 @@ embed,iframe,object {
     position:absolute
 }
 #nprogress .bar {
-    background:orange;
+    background:deeppink;
     position:fixed;
     z-index:1031;
     top:0;
@@ -6549,7 +6549,7 @@ progress {
     font-size:1em;
     margin-top:0;
     margin-bottom:0;
-    text-shadow:0 0 1px rgba(0,0,0,.22);
+    text-shadow:0 0 0 rgba(0,0,0,.1);
     width:100%;
     text-align:center
 }
@@ -6558,10 +6558,10 @@ progress {
     width:0
 }
 .skill-1::-webkit-progress-value {
-    background:#ff9e2c
+    background:#FF69B4
 }
 .skill-1::-moz-progress-bar {
-    background:#ff9e2c
+    background:#FF69B4
 }
 @-webkit-keyframes bar-fill {
     0% {

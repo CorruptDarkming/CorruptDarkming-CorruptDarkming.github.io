@@ -496,8 +496,7 @@
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/wordpress-rotating-ball-o.svg">
         <img src="https://cdn.jsdelivr.net/gh/honjun/cdn@1.6/img/other/disqus-preloader.svg">
       </div>
-      <p style="color: #f27fcb;">&copy 2021</p>
-    </div>
+      <p id="sitetime" style="color: #f27fcb;"></p>
       <p style="color: #f27fcb;">Copyright © 2021 <a href="http://darkming.top">darkming.top</a> All Rights Reserved.</p>
     </div>
 
@@ -522,9 +521,9 @@
 <script type="text/javascript">
 /* <![CDATA[ */
 if (/Android|webOS|iPhone|iPod|BlackBerry/i.test(navigator.userAgent)) {
-  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4,nikki4webstorage.papegames.cn/admin/1234ff7b6b860f2717ea1b558bd5810b.mp4","live":"close"},"windowheight":"fixed","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 } else {
-  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
+  var Poi = {"pjax":"1","movies":{"url": "https:/","name":"nn4cdn.nikkigames.cn/xiaomaoqiu/7a13db833a4e504e9b07bacb453ab32e.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/ea9174f8083e37aaf5233516a70fc7b5.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/2526c0bbd5d68e623383042034f34375.mp4,nn4cdn.nikkigames.cn/xiaomaoqiu/aa42c48d6ae08d2cc82c17e006d4b69a.mp4,nikki4webstorage.papegames.cn/admin/1234ff7b6b860f2717ea1b558bd5810b.mp4","live":"open"},"windowheight":"auto","codelamp":"close","ajaxurl":"","order":"asc","formpostion":"bottom"};
 }
 /* ]]> */
 
@@ -568,6 +567,44 @@ $(document).ready(function() {
     }
   }
 });
+</script>
+<!-- 显示网站创立天数 -->
+<script language=javascript>
+function siteTime(){
+window.setTimeout("siteTime()", 1000);
+var seconds = 1000
+var minutes = seconds * 60
+var hours = minutes * 60
+var days = hours * 24
+var years = days * 365
+var today = new Date()
+var todayYear = today.getFullYear()
+var todayMonth = today.getMonth()
+var todayDate = today.getDate()
+var todayHour = today.getHours()
+var todayMinute = today.getMinutes()
+var todaySecond = today.getSeconds()
+
+/* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+year - 作为date对象的年份，为4位年份值
+month - 0-11之间的整数，做为date对象的月份
+day - 1-31之间的整数，做为date对象的天数
+hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+minutes - 0-59之间的整数，做为date对象的分钟数
+seconds - 0-59之间的整数，做为date对象的秒数
+microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+var t1 = Date.UTC(2020,01,23,12,00,00)
+var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+var diff = t2-t1
+
+var diffYears = Math.floor(diff/years)
+var diffDays = Math.floor((diff/days)-diffYears*365)+31
+var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)+744
+var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)+44640
+var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)+2678400
+document.getElementById("sitetime").innerHTML="网站已平稳运行："+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"
+}
+siteTime()
 </script>
     <div class="openNav no-select" style="height: 50px;">
       <div class="iconflat no-select" style="width: 50px; height: 50px;">
@@ -746,9 +783,49 @@ $(document).ready(function() {
       </li>
     
   </ul>
+  <p id="sitetime-mobile" style="color: #f27fcb; font-size: 10px;"></p>
   <p style="text-align: center; font-size: 13px; color: #f27fcb;">&copy 2021 <a href="http://darkming.top">darkming.top</a> All Rights Reserved.</p>
 </div>
 <button onclick="topFunction()" class="mobile-cd-top" id="moblieGoTop" title="Go to top" style="display: none;"><i class="fa fa-chevron-up" aria-hidden="true"></i></button>
+
+<!-- 显示网站创立天数 -->
+<script language=javascript>
+  function siteTimeMobile(){
+  window.setTimeout("siteTimeMobile()", 1000);
+  var seconds = 1000
+  var minutes = seconds * 60
+  var hours = minutes * 60
+  var days = hours * 24
+  var years = days * 365
+  var today = new Date()
+  var todayYear = today.getFullYear()
+  var todayMonth = today.getMonth()
+  var todayDate = today.getDate()
+  var todayHour = today.getHours()
+  var todayMinute = today.getMinutes()
+  var todaySecond = today.getSeconds()
+  
+  /* Date.UTC() -- 返回date对象距世界标准时间(UTC)1970年1月1日午夜之间的毫秒数(时间戳)
+  year - 作为date对象的年份，为4位年份值
+  month - 0-11之间的整数，做为date对象的月份
+  day - 1-31之间的整数，做为date对象的天数
+  hours - 0(午夜24点)-23之间的整数，做为date对象的小时数
+  minutes - 0-59之间的整数，做为date对象的分钟数
+  seconds - 0-59之间的整数，做为date对象的秒数
+  microseconds - 0-999之间的整数，做为date对象的毫秒数 */
+  var t1 = Date.UTC(2020,01,23,12,00,00)
+  var t2 = Date.UTC(todayYear,todayMonth,todayDate,todayHour,todayMinute,todaySecond)
+  var diff = t2-t1
+  
+  var diffYears = Math.floor(diff/years)
+  var diffDays = Math.floor((diff/days)-diffYears*365)+31
+  var diffHours = Math.floor((diff-(diffYears*365+diffDays)*days)/hours)+744
+  var diffMinutes = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours)/minutes)+44640
+  var diffSeconds = Math.floor((diff-(diffYears*365+diffDays)*days-diffHours*hours-diffMinutes*minutes)/seconds)+2678400
+  document.getElementById("sitetime-mobile").innerHTML="网站已运行："+diffYears+" 年 "+diffDays+" 天 "+diffHours+" 小时 "+diffMinutes+" 分钟 "+diffSeconds+" 秒"
+  }
+  siteTimeMobile()
+  </script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.css">
 <script src="https://cdn.jsdelivr.net/npm/aplayer/dist/APlayer.min.js"></script>
 <!-- require MetingJS -->

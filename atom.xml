@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="/"/>
-  <updated>2021-04-12T13:08:16.056Z</updated>
+  <updated>2021-04-18T14:58:03.181Z</updated>
   <id>/</id>
   
   <author>
@@ -15,6 +15,24 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>线性代数知识卡片</title>
+    <link href="/2021/04/18/%E7%BA%BF%E6%80%A7%E4%BB%A3%E6%95%B0/"/>
+    <id>/2021/04/18/线性代数/</id>
+    <published>2021-04-18T14:55:01.000Z</published>
+    <updated>2021-04-18T14:58:03.181Z</updated>
+    
+    <summary type="html">
+    
+      线性代数知识卡片
+    
+    </summary>
+    
+      <category term="学术" scheme="/categories/%E5%AD%A6%E6%9C%AF/"/>
+    
+    
+  </entry>
   
   <entry>
     <title>更新日志</title>
@@ -403,34 +421,6 @@
     
       <category term="技术" scheme="/categories/%E6%8A%80%E6%9C%AF/"/>
     
-    
-  </entry>
-  
-  <entry>
-    <title>既得少年时</title>
-    <link href="/2019/12/18/%E6%97%A2%E5%BE%97%E5%B0%91%E5%B9%B4%E6%97%B6/"/>
-    <id>/2019/12/18/既得少年时/</id>
-    <published>2019-12-17T18:36:45.000Z</published>
-    <updated>2020-11-20T08:13:46.461Z</updated>
-    
-    <summary type="html">
-    
-      
-      
-        
-        
-          &lt;p&gt;​      
-        
-      
-    
-    </summary>
-    
-      <category term="清单" scheme="/categories/%E6%B8%85%E5%8D%95/"/>
-    
-    
-      <category term="web" scheme="/tags/web/"/>
-    
-      <category term="悦读" scheme="/tags/%E6%82%A6%E8%AF%BB/"/>
     
   </entry>
   
